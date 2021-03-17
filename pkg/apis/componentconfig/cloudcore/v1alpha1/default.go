@@ -157,10 +157,11 @@ func NewDefaultCloudCoreConfig() *CloudCoreConfig {
 				StreamPort:              10003,
 			},
 			Router: &Router{
-				Enable:      false,
-				Address:     "0.0.0.0",
-				Port:        9443,
-				RestTimeout: 60,
+				Enable:                 false,
+				Address:                "0.0.0.0",
+				Port:                   9443,
+				RestTimeout:            60,
+				MaxMessageSizeRestSide: 100,
 			},
 		},
 		LeaderElection: &componentbaseconfig.LeaderElectionConfiguration{
